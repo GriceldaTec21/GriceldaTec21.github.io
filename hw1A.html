@@ -1,36 +1,96 @@
-@charset "UTF-8";
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
 
-title {
-	text-align: center;
-}
-body {
-	font-family: Arial, Helvetica, sans-serif;
-}
-h1 {
-	text-align: center;
-}
-h2 {
-	text-align: center;
-}
-.image{
-	 float: left;
-	 margin-right: 10px;
+<title>Simple HTML & CSS Page</title>
 
-}
-.clearfloat{
-	    clear: both;
-}
-.button:active{
+<link href="AssignCSS.css" rel="stylesheet" type="text/css">
 
-background-color: rgb(200, 220, 100);
 
-}
-.button{
 
-padding: 15px;
+</head>
 
-background-color: rgb(200, 255, 0);
+<body>
+<h1 style = "color:DodgerBlue;" class="intro">
+  Simple HTML & CSS Page</h1>
+    <!-- $(this).css("color", "green"); style = "background-color:rgb(200, 255, 0)!-->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+  <script>
+  $(document).ready(function(){
+    $("button").click(function(){
 
-border-radius: 15px;
+      setTimeout(function () {
 
-}
+          $("h1").css("color", "red").fadeIn(30000);
+          $(".intro").animate( {fontSize: "3rem"});
+          $("section").css("border", "5px solid green");
+
+      }, 1000);
+      setTimeout(function () {
+        $("h1").css("color", "green").fadeIn(30000);
+      }, 2000);
+      setTimeout(function () {
+        $("h1").css("color", "DodgerBlue").fadeIn(30000);
+            $(".intro").animate( {fontSize: "2rem"});
+      }, 3000);
+
+
+
+    });
+  });
+  </script>
+  </head>
+  <body>
+
+  <button class="button" >Start animation</button>
+
+
+  <div class="container">
+        <div class="image">
+        <section>
+        <img src="Gricelda.JPG" alt="My potho" width="150" height="160">
+        </div>
+        <div class="text">
+          <p>My name is Gricelda Tecun. My Major is Computer Science, and I am learning front end now.
+           I have a strong background in data structure and using Java
+           and C++. I am student Assistant at the IT department and I have
+           got my bachelor’s in computer Science, but I have never done an
+          internship that is why I am having problems on getting a job on Tech
+          industries.</p>
+        </div>
+      </div>
+<!--
+<a><img src="Gricelda.jpg" alt="My potho" width="150" height="160">
+
+My name is Gricelda Tecun. My Major is Computer Science, and I am learning front end now.
+ I have a strong background in data structure and using Java
+ and C++. I am student Assistant at the IT department and I have
+ got my bachelor’s in computer Science, but I have never done an
+internship that is why I am having problems on getting a job on Tech
+industries. </a>!-->
+
+<p class = "clearfloat">I am so excited learn more about CSS and HTML since I have created
+some web pages, but I was in charge about the backend.</p>
+
+<h2>Technologies for this class</h2>
+<!--https://www.w3schools.com/html/html_lists.asp?fbclid=IwAR38F_JRqA4XChCJeaG_nBEgNjII8T8EUpBbI4-1gIhRomDW6vxfWIQJrV8 !-->
+<ul>
+  <li>HTML</li>
+  <li>CSS</li>
+  <li>JavaScrip</li>
+</ul>
+
+<h2>Resources</h2>
+<!--Hyperlinks  unordered HTML list!-->
+<ul>
+  <li><a href = "https://www.w3schools.com/html/default.asp" target="_blank" rel="noopener noreferrer">Easy Learning HTML </a>
+
+    <a>- This website help me with the basses of HTML and CSS</a></li>
+  <li><a href = "Lesson1-GeneralIntro.pdf" target="_blank" rel="noopener noreferrer">Lesson 1</a><!--rel for security-->
+    <a>- This website is the Lesson 1 from Class 128</a>
+  </li>
+</ul>
+
+</body>
+</html>
